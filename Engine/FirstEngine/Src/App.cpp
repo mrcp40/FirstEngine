@@ -1,13 +1,16 @@
 #include "Precompiled.h"'
-#include "App.h"'
+#include "App.h"
+#include "AppState.h"
 
 using namespace FirstEngine;
+using namespace FirstEngine::Core;
+using namespace FirstEngine::Graphics;
 
 void App::Run(const AppConfig& config)
 {
 	LOG("App Start");
 
-	// 初始化所有单例模式实例
+	// 初始化所有单例模式实例 (static initialize)
 	Window myWindow;
 	myWindow.Initialize(
 		GetModuleHandle(nullptr),
@@ -15,6 +18,8 @@ void App::Run(const AppConfig& config)
 		config.winWidth,
 		config.winHeight
 	);
+	auto handle = myWindow.GetWindowHandle();
+	GraphicsSystem::StaticInitialize(handle, false);
 
 	// 初始化启动阶段
 
@@ -34,10 +39,20 @@ void App::Run(const AppConfig& config)
 	// 终止最终阶段
 
 	// 终止所有单例模式实例
+	GraphicsSystem::StaticTerminate();
 	myWindow.Terminate();
 }
 
 void App::Quit()
 {
 	mIsRunning = false;
+}
+
+void App::ChangeState(const std::string& stateName)
+{
+	auto iter = mAppStates.find(stateName);
+	if (iter != mAppStates.end())
+	{
+		mNextState = iter->second.get();
+	}
 }
