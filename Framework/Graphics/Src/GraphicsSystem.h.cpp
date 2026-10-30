@@ -70,7 +70,7 @@ void GraphicsSystem::Initialize(HWND window, bool fullscreen)
 	swapChainDesc.OutputWindow = window;
 	swapChainDesc.SampleDesc.Count = 1;
 	swapChainDesc.SampleDesc.Quality = 0;
-	swapChainDesc.Windowed = fullscreen;
+	swapChainDesc.Windowed = !fullscreen;
 	swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 
 	const D3D_FEATURE_LEVEL featureLevel = D3D_FEATURE_LEVEL_11_1;
