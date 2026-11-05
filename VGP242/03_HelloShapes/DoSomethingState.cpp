@@ -10,6 +10,14 @@ void DoSomethingState::Initialize()
 	mVertecies.push_back({ { 0.0f, 0.5f, 0.0f } });
 	mVertecies.push_back({ { 0.5f, 0.0f, 0.0f } });
 
+	mVertecies.push_back({ { -0.5f, 0.0f, 0.0f } });
+	mVertecies.push_back({ { -0.5f, 1.0f, 0.0f } });
+	mVertecies.push_back({ { 0.0f, 0.5f, 0.0f } });
+
+	mVertecies.push_back({ { 0.5f, 0.0f, 0.0f } });
+	mVertecies.push_back({ { 0.0f, 0.5f, 0.0f } });
+	mVertecies.push_back({ { 0.5f, 1.0f, 0.0f } });
+
 	// start creating the components that communicate with GPU
 	auto device = GraphicsSystem::Get()->GetDevice();
 
@@ -97,6 +105,10 @@ void DoSomethingState::Initialize()
 }
 void DoSomethingState::Update(float deltaTime)
 {
+	if (InputSystem::Get()->IsKeyPressed(KeyCode::SPACE))
+	{
+		MainApp().ChangeState("DoColorState");
+	}
 
 }
 void DoSomethingState::Render()

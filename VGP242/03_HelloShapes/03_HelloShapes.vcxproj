@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoColorState.cpp" />
     <ClCompile Include="DoSomethingState.cpp" />
+    <ClCompile Include="ThirdShapeColor.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +138,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoColorState.h" />
     <ClInclude Include="DoSomethingState.h" />
+    <ClInclude Include="ThirdShapeColor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

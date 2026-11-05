@@ -32,6 +32,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shaders", "Shaders", "{A67825D3-2B18-4C20-AC48-C4FEBCF352C7}"
 	ProjectSection(SolutionItems) = preProject
 		Assets\Shaders\DoSomething.fx = Assets\Shaders\DoSomething.fx
+		Assets\Shaders\DoColor.fx = Assets\Shaders\DoColor.fx
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_HelloShapes", "VGP242\03_HelloShapes\03_HelloShapes.vcxproj", "{DCED92AF-15C1-4B98-BE2C-CB07F2B6B293}"

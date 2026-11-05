@@ -21,9 +21,21 @@
     <ClCompile Include="DoSomethingState.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DoColorState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdShapeColor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DoSomethingState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DoColorState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdShapeColor.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
