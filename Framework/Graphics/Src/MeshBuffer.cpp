@@ -45,7 +45,7 @@ void MeshBuffer::CreateVertexBuffer(const void* vertices, uint32_t vertexSize, u
 
 	// build the vertex buffer, which stores the vetcies to give to GPU
 	D3D11_BUFFER_DESC bufferDesc{};
-	bufferDesc.ByteWidth = vertexSize* vertexSize;
+	bufferDesc.ByteWidth = vertexSize* vertexCount;
 	bufferDesc.Usage = D3D11_USAGE_DEFAULT;
 	bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 	bufferDesc.MiscFlags = 0;

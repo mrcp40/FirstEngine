@@ -15,17 +15,49 @@ void DoColorState::Initialize()
 	mVertecies.push_back({ { -1.0f,  1.0f, -1.0f }, Colors::Blue });
 	mVertecies.push_back({ {  1.0f,  1.0f, -1.0f }, Colors::Blue });
 
-	mVertecies.push_back({ { -1.0f, -1.0f, -1.0f }, Colors::Red });
-	mVertecies.push_back({ {  1.0f,  1.0f, -1.0f }, Colors::Red });
-	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Red });
+	mVertecies.push_back({ { -1.0f, -1.0f, -1.0f }, Colors::Blue });
+	mVertecies.push_back({ {  1.0f,  1.0f, -1.0f }, Colors::Blue });
+	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Blue });
 
 	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Orange });
 	mVertecies.push_back({ {  1.0f,  1.0f, -1.0f }, Colors::Orange });
 	mVertecies.push_back({ {  1.0f,  1.0f,  1.0f }, Colors::Orange });
 
-	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Yellow });
-	mVertecies.push_back({ {  1.0f,  1.0f,  1.0f }, Colors::Yellow });
-	mVertecies.push_back({ {  1.0f, -1.0f,  1.0f }, Colors::Yellow });
+	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Orange });
+	mVertecies.push_back({ {  1.0f,  1.0f,  1.0f }, Colors::Orange });
+	mVertecies.push_back({ {  1.0f, -1.0f,  1.0f }, Colors::Orange });
+
+	mVertecies.push_back({ {  -1.0f, 1.0f, -1.0f }, Colors::Yellow });
+	mVertecies.push_back({ {  -1.0f, 1.0f,  1.0f }, Colors::Yellow });
+	mVertecies.push_back({ {   1.0f, 1.0f,  1.0f }, Colors::Yellow });
+
+	mVertecies.push_back({ {  -1.0f, 1.0f, -1.0f }, Colors::Yellow });
+	mVertecies.push_back({ {   1.0f, 1.0f,  1.0f }, Colors::Yellow });
+	mVertecies.push_back({ {   1.0f, 1.0f, -1.0f }, Colors::Yellow });
+
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Red });
+	mVertecies.push_back({ { -1.0f,  1.0f,  1.0f }, Colors::Red });
+	mVertecies.push_back({ { -1.0f,  1.0f, -1.0f }, Colors::Red });
+
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Red });
+	mVertecies.push_back({ { -1.0f,  1.0f, -1.0f }, Colors::Red });
+	mVertecies.push_back({ { -1.0f, -1.0f, -1.0f }, Colors::Red });
+
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Green });
+	mVertecies.push_back({ { -1.0f, -1.0f, -1.0f }, Colors::Green });
+	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Green });
+
+	mVertecies.push_back({ {  1.0f, -1.0f,  1.0f }, Colors::Green });
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Green });
+	mVertecies.push_back({ {  1.0f, -1.0f, -1.0f }, Colors::Green });
+
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Purple });
+	mVertecies.push_back({ {  1.0f, -1.0f,  1.0f }, Colors::Purple });
+	mVertecies.push_back({ {  1.0f,  1.0f,  1.0f }, Colors::Purple });
+															
+	mVertecies.push_back({ { -1.0f, -1.0f,  1.0f }, Colors::Purple });
+	mVertecies.push_back({ {  1.0f,  1.0f,  1.0f }, Colors::Purple });
+	mVertecies.push_back({ { -1.0f,  1.0f,  1.0f }, Colors::Purple });
 
 	mMeshBuffer.Initialize(mVertecies.data(), sizeof(VertexPC), mVertecies.size());
 	std::filesystem::path shaderPath = L"../../Assets/Shaders/DoTransform.fx";
